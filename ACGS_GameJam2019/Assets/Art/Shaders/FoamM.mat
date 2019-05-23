@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BubblesM
-  m_Shader: {fileID: -6465566751694194690, guid: 5ec5085e7bb46e44b98a2830c09119df,
+  m_Name: FoamM
+  m_Shader: {fileID: -6465566751694194690, guid: b7ec927a6cd20464cb98bbfc86ae6586,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
