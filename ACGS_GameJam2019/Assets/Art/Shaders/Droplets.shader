@@ -10,9 +10,10 @@
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque" "Queue"="Transparent"}
         LOD 100
-
+			
+		GrabPass {"_GrabTexture"}
         Pass
         {
             CGPROGRAM
@@ -32,12 +33,13 @@
             struct v2f
             {
                 float2 uv : TEXCOORD0;
+				float4 grabUv : TEXCOORD1;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
+            sampler2D _MainTex, _GrabTexture;
+			float4 _MainTex_ST;
 			float _Size, _T, _Distortion, _Blur;
 
             v2f vert (appdata v)
@@ -45,6 +47,8 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				o.uv = UNITY_PROJ_COORD(ComputeGrabScreenPos(o.vertex));
+
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
@@ -98,7 +102,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
 				float t = fmod(_Time.y + _T, 7200);
-
+			
 				float4 col = 0;
 
 				float3 drops = Layer(i.uv, t);
@@ -106,10 +110,30 @@
 				drops += Layer(i.uv*1.35 + 1.54, t);
 				drops += Layer(i.uv*1.57 - 7.54, t);
 
-				float blur = _Blur * 7 * (1-drops.z);
-				col = tex2Dlod(_MainTex, float4(i.uv+drops.xy*_Distortion,0,blur));
+				float fade = 1 - saturate(fwidth(i.uv) * 60);
 
-                return col;
+				float blur = _Blur * 7 * (1-drops.z*fade);
+
+				// col = tex2Dlod(_MainTex, float4(i.uv+drops.xy*_Distortion,0,blur));
+				
+				float2 projUv = i.grabUv.xy / i.grabUv.w;
+				projUv += drops.xy * _Distortion * fade;
+				blur *= 0.01;
+
+				const float numSamples = 32;
+				float a = N21(i.uv)*6.2831;
+				for (float i = 0; i < numSamples; i++)
+				{
+					float2 offs = float2(sin(a), cos(a))*blur;
+					float d = frac(sin(i + 1)*546.)*5424.);
+					d = sqrt(d);
+					offs *= d;
+					col += tex2D(_GrabTexture, projUv + offs);
+					a++;
+				}
+				col /= numSamples;
+
+                return col * 0.9;
             }
             ENDCG
         }
