@@ -58,10 +58,9 @@
 				float2 gv = frac(uv)-0.5;
 
 				float x = 0;
-//				float y = sin(t);
-				float y = -sin(t+sin(t+sin(t)*.5))*.0.45;
+				float y = -sin(t+sin(t+sin(t)*0.5))*0.45;
 
-				float dropPos = (gv-float2(x,y)) / aspect;
+				float2 dropPos = (gv-float2(x, y)) / aspect;
 
 				float drop = S(0.05, 0.03, length(dropPos));
 				col += drop;
