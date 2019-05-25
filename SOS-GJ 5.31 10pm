@@ -1,0 +1,30 @@
+Song name theme 
+Africa and River Flows in You
+
+Art
+-Shader water, foam, rocks, raindrops, land and Sun
+-Player or object
+-River in Africa
+
+Audio
+-water
+-leaves
+-Various sfx
+-animals(?)
+
+Mechanics
+-Auto runner with water buoyancy
+-Left, Right, dodge controls
+-Floating in air(?)
+
+UI
+-Drenchness=health
+-Distance marker
+-Timer
+-Minimap
+-Pause menu
+
+Startup UI
+-Play Options Credits Quit
+-Options - soundcontrol(playlist?), ..
+-Credits - anim
