@@ -26,6 +26,6 @@ Material:
     m_Floats:
     - _Blur: 0
     - _Distortion: -5
-    - _Size: 6
-    - _T: 7
+    - _Size: 7
+    - _T: 4.5
     m_Colors: []

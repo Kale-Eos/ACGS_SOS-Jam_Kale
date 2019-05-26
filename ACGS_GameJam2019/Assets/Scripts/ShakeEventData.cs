@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Shake Transform Event", menuName = "Custom/Shake Transform Event 2", order = 1)]
+[CreateAssetMenu(fileName = "Shake Transform Event", menuName = "Custom/Shake Transform Event", order = 1)]
 public class ShakeEventData : ScriptableObject
 {
     public enum Target
