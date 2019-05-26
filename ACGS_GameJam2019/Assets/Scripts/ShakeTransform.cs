@@ -86,7 +86,7 @@ public class ShakeTransform : MonoBehaviour
 
         for (int i = shakeEvents.Count - 1; i != -1; i--)
         {
-            ShakeEvent se = shakeEvents[]; se.Update();
+            ShakeEvent se = shakeEvents[i]; se.Update();
 
             if(se.target == ShakeEventData.Target.Position)
             {

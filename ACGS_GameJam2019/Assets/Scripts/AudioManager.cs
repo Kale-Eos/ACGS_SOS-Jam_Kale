@@ -77,13 +77,6 @@ public class AudioManager : MonoBehaviour
         PlaySound("Music");
     }
 
-    void update()
-    {
-        if (Input.GetMouseButton(0)) ;
-        {
-        }
-    }
-
     public void PlaySound(string _name)
     {
         for (int i = 0; i < sounds.Length; i++)     // any audible sound of increasing order
