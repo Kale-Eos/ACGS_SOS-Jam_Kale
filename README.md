@@ -5,5 +5,5 @@ This is the repository for the ACGS (Aggressive Combustion Game Studios) Start o
 Used Unity version 2019.1.3 using the Lightweight Render Pipeline preset.  All audio was developed through Audacity and FL Studio 10.
 ```
 
-The asset packages implemented are Cinemachine v2.3.4, various elements of Unity's Standard Assets, TextMesh Pro v2.0.1, and Shader Graph v5.16.1.
-The project was completed with Unity 3D using the Lightweight Render Pipeline and Post Processing setting format.
+The asset packages implemented are Cinemachine v2.3.4, Core RP Library v5.7.2, Mathematics v1.0.1, Shader Graph v5.16.1, TextMesh Pro v2.0.1, and various elements of Unity Technologies's Standard Assets v1.1.5.
+The project was completed with Unity 3D using the Lightweight Render Pipeline while utilizing the Post Processing setting format.
