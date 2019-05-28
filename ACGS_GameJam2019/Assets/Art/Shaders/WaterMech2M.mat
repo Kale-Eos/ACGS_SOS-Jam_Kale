@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMech2M
+  m_Shader: {fileID: -6465566751694194690, guid: cda28253fb84dcb4882aee2a0233f1ff,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_2CEED88B:
+        m_Texture: {fileID: 2800000, guid: 2f25cee317e5ba043b1d49221a7f965a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_105AC141: 0.3
+    - Vector1_303E1233: 0.15
+    - Vector1_51FD1152: 1
+    - Vector1_8EAD53B6: 0.8
+    - Vector1_9F20B17F: 10
+    - Vector1_A5A645E9: 0.9
+    - Vector1_C986F4A1: 5
+    - Vector1_F1F5A749: 0.7
+    m_Colors:
+    - Color_4BC4EB17: {r: 0.0040494935, g: 0.7780726, b: 0.8584906, a: 1}
+    - Color_9F954034: {r: 0, g: 0.19951421, b: 0.6698113, a: 0}
