@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMech3M
+  m_Shader: {fileID: -6465566751694194690, guid: 4f380ca75c91c8c4abdb24565695b9b7,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_AF49CF97:
+        m_Texture: {fileID: 2800000, guid: 03683b1b88a86d943a74b925948b0abc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMover_77C32519_Texture2DDB76F874_1403331372:
+        m_Texture: {fileID: 2800000, guid: 03683b1b88a86d943a74b925948b0abc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMover_9B6406C4_Texture2DDB76F874_1403331372:
+        m_Texture: {fileID: 2800000, guid: 03683b1b88a86d943a74b925948b0abc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_6D42B418: 50
+    - Vector1_7E397234: 8
+    - Vector1_9C717D38: 1
+    - Vector1_A6464A1: 0.1
+    m_Colors:
+    - Color_1F4731FC: {r: 0, g: 1, b: 0.9797902, a: 0}
+    - Color_4B1C8E09: {r: 0, g: 0.7376323, b: 1, a: 0}
+    - Color_7CE6D6B4: {r: 1, g: 1, b: 1, a: 0}
