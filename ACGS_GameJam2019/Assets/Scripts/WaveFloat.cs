@@ -45,12 +45,6 @@ public class WaveFloat : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-
     void Update()
     {
         // default water surface
