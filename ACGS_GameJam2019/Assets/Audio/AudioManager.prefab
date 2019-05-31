@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &311486485775737756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311486485775737758}
+  - component: {fileID: 311486485775737759}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311486485775737758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311486485775737756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.144566, y: 4.784981, z: -9.696346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311486485775737759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311486485775737756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6199044d0bd2042b27756b63044813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: eafad64496c77ed428f64d7b3945a884, type: 3}
+    volume: 0.5
+    tempo: 1
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 1
+  - name: Credits_BGM
+    clip: {fileID: 8300000, guid: b4be78a2f8c08de44af1c57a2ebffc8a, type: 3}
+    volume: 0.5
+    tempo: 1
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 0
+  - name: Africa
+    clip: {fileID: 8300000, guid: be7c7f9e2d78a4e44b61fba504709221, type: 3}
+    volume: 1
+    tempo: 1
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 1
+  - name: Level1_BGM
+    clip: {fileID: 8300000, guid: 70e5e12c1cdc2d5499eb75f3370e0d67, type: 3}
+    volume: 1
+    tempo: 1
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 1
+  - name: RiverFlow
+    clip: {fileID: 8300000, guid: e6ef8d8eb8bf5b94bb3762fa07a6c1aa, type: 3}
+    volume: 1
+    tempo: 1
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 1
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: 65739406575db464096a71c0c44b5c0d, type: 3}
+    volume: 0.7
+    tempo: 1
+    RandomVolume: 0.1
+    RandomTempo: 0.3
+    loop: 0
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: c99293235c6b2c24f9e40a606dae27e6, type: 3}
+    volume: 0.1
+    tempo: 1
+    RandomVolume: 0.1
+    RandomTempo: 0.1
+    loop: 0

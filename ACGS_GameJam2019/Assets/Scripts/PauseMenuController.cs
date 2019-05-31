@@ -49,7 +49,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu1()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level1_BGM");       // Stop Level2 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -58,7 +57,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu2()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level2_BGM");       // Stop Level2 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -67,7 +65,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu3()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level3_BGM");       // Stop Level3 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -76,7 +73,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu4()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level4_BGM");       // Stop Level4 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -85,7 +81,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu5()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level5_BGM");       // Stop Level5 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -94,7 +89,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenu6()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("Level6_BGM");       // Stop Level6 Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);
@@ -103,7 +97,6 @@ public class PauseMenuController : MonoBehaviour
     public void BackToMainMenuFreeRoam()
     {
         Time.timeScale = 1f;                        // time is unfrozen
-        audioManager.StopSound("ShootingStars");    // stops Shooting Stars
         audioManager.StopSound("FreeRoam");         // Stop Free Roam Music
         audioManager.PlaySound("Music");            // Restarts main menu music
         SceneManager.LoadScene(sceneName);

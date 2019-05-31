@@ -41,7 +41,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     string freeRoam = "FreeRoam";                           // instantiates Free Roam BGM
     [SerializeField]
-    string shootingStars = "ShootingStars";                 // instantiates the mistake
+    string credits_bgm = "Credits_BGM";
 
     public void OnMouseOver()
     {
@@ -103,7 +103,6 @@ public class MainMenuController : MonoBehaviour
         audioManager.StopSound(level4_bgm);                 // Stops Level 2 bgm
     }
 
-
     public void PlayLevel5_BGM()
     {
         audioManager.PlaySound(level3_bgm);                 // Plays Level 2 bgm
@@ -124,11 +123,11 @@ public class MainMenuController : MonoBehaviour
         audioManager.StopSound(level6_bgm);                 // Stops Level 2 bgm
     }
 
-
     public void PlayFreeRoam_BGM()
     {
         audioManager.PlaySound(freeRoam);                   // Plays Free Roam bgm
     }
+
     public void StopFreeRoam_BGM()
     {
         audioManager.StopSound(freeRoam);                   // Stop Free Roam bgm
@@ -138,14 +137,17 @@ public class MainMenuController : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        audioManager.StopSound("ShootingStars");
         audioManager.StopSound("Level1_BGM");       // Stops level 1 music
         audioManager.PlaySound("Music");            // Restarts main menu music
     }
 
     public void CreditsToMainMenu()
     {
-        audioManager.StopSound("ShootingStars");
+        //     animation.Play(Credits.clip.name);
+        //     yield WaitForSeconds(Credits.clip.length + 0);
+        //     Application.LoadLevel("Credits");
+
+        SceneManager.LoadScene("TitleScene");        // Reverses the the scene change to go back to Title Scene
         audioManager.StopSound("Credits_BGM");       // Stop playing Credits_BGM
         audioManager.PlaySound("Music");             // Restarts main menu music
     }
