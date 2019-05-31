@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class MainMenuController : MonoBehaviour
 {
     AudioManager audioManager;
-    public Animator anim;
+    public Animator CreditsBlur;
 
     void Start()
     {
@@ -32,12 +32,6 @@ public class MainMenuController : MonoBehaviour
     string level2_bgm = "Level2_BGM";                       // instantiates Level 2 BGM
     [SerializeField]
     string level3_bgm = "Level3_BGM";                       // instantiates Level 3 BGM
-    [SerializeField]
-    string level4_bgm = "Level4_BGM";                       // instantiates Level 4 BGM
-    [SerializeField]
-    string level5_bgm = "Level5_BGM";                       // instantiates Level 5 BGM
-    [SerializeField]
-    string level6_bgm = "Level6_BGM";                       // instantiates Level 6 BGM
     [SerializeField]
     string freeRoam = "FreeRoam";                           // instantiates Free Roam BGM
     [SerializeField]
@@ -93,36 +87,6 @@ public class MainMenuController : MonoBehaviour
         audioManager.StopSound(level3_bgm);                 // Stops Level 2 bgm
     }
 
-    public void PlayLevel4_BGM()
-    {
-        audioManager.PlaySound(level4_bgm);                 // Plays Level 2 bgm
-    }
-
-    public void StopLevel4_BGM()
-    {
-        audioManager.StopSound(level4_bgm);                 // Stops Level 2 bgm
-    }
-
-    public void PlayLevel5_BGM()
-    {
-        audioManager.PlaySound(level3_bgm);                 // Plays Level 2 bgm
-    }
-
-    public void StopLevel5_BGM()
-    {
-        audioManager.StopSound(level5_bgm);                 // Stops Level 2 bgm
-    }
-
-    public void PlayLevel6_BGM()
-    {
-        audioManager.PlaySound(level6_bgm);                 // Plays Level 2 bgm
-    }
-
-    public void StopLevel6_BGM()
-    {
-        audioManager.StopSound(level6_bgm);                 // Stops Level 2 bgm
-    }
-
     public void PlayFreeRoam_BGM()
     {
         audioManager.PlaySound(freeRoam);                   // Plays Free Roam bgm
@@ -131,6 +95,16 @@ public class MainMenuController : MonoBehaviour
     public void StopFreeRoam_BGM()
     {
         audioManager.StopSound(freeRoam);                   // Stop Free Roam bgm
+    }
+
+    public void PlayCredits_BGM()
+    {
+        audioManager.PlaySound(credits_bgm);                // Plays Free Roam bgm
+    }
+
+    public void StopCredits_BGM()
+    {
+        audioManager.StopSound(credits_bgm);                // Stop Free Roam bgm
     }
 
     // Level BGM Control ///////////////////////////////////////////////////////////////////////////////////
@@ -143,10 +117,13 @@ public class MainMenuController : MonoBehaviour
 
     public void CreditsToMainMenu()
     {
-        //     animation.Play(Credits.clip.name);
-        //     yield WaitForSeconds(Credits.clip.length + 0);
-        //     Application.LoadLevel("Credits");
+        CreditsBlur.SetTrigger("SetBlur");
+        CreditsBlur.Play("CreditsBlur");
+        Invoke("CreditsToMenu", 5);
+    }
 
+    void CreditsToMenu()
+    {
         SceneManager.LoadScene("TitleScene");        // Reverses the the scene change to go back to Title Scene
         audioManager.StopSound("Credits_BGM");       // Stop playing Credits_BGM
         audioManager.PlaySound("Music");             // Restarts main menu music

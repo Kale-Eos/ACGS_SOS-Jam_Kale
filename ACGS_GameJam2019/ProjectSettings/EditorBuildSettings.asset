@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 058d7efe303318c449ca489c016de495
   - enabled: 1
+    path: Assets/Scenes/StoryBoard.unity
+    guid: c2735186e7252cd41859ec0427245890
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 7cebcc28bb18f014cba6a96a7dec618d
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 52498e0a1f33a0d48b69becddff7035f
   m_configObjects: {}
