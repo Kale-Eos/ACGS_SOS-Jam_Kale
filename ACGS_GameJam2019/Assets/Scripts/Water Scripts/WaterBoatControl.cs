@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaterBoatControl : MonoBehaviour
 {
+    public Animator Fish;
+
     // Visible Properties
     public Transform Motor;
     public float SteerPower = 500f;
@@ -30,11 +32,15 @@ public class WaterBoatControl : MonoBehaviour
         // Steer Direction [-1, 0, 1]
         if (Input.GetKey(KeyCode.A))
         {
+            Fish.SetBool("GoRight", false);
+            Fish.SetBool("GoLeft", true);
             steer = 1;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+            Fish.SetBool("GoLeft", false);
+            Fish.SetBool("GoRight", true);
             steer = -1;
         }
 
@@ -47,6 +53,7 @@ public class WaterBoatControl : MonoBehaviour
         // forward/backward power
         if(Input.GetKey(KeyCode.W))
         {
+
             PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * MaxSpeed, Power);
         }
         if(Input.GetKey(KeyCode.S))
