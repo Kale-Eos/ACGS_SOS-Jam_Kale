@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterBoatControl : MonoBehaviour
 {
-    public Animator Fish;
+    //public Animator Fish;
 
     // Visible Properties
     public Transform Motor;
@@ -32,15 +32,15 @@ public class WaterBoatControl : MonoBehaviour
         // Steer Direction [-1, 0, 1]
         if (Input.GetKey(KeyCode.A))
         {
-            Fish.SetBool("GoRight", false);
-            Fish.SetBool("GoLeft", true);
+            //Fish.SetBool("GoRight", false);
+            //Fish.SetBool("GoLeft", true);
             steer = 1;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Fish.SetBool("GoLeft", false);
-            Fish.SetBool("GoRight", true);
+            //Fish.SetBool("GoLeft", false);
+            //Fish.SetBool("GoRight", true);
             steer = -1;
         }
 
@@ -50,15 +50,15 @@ public class WaterBoatControl : MonoBehaviour
         // Compute Vectors
         var forward = Vector3.Scale(new Vector3(1, 0, 1), transform.forward);
 
-        // forward/backward power
-        if(Input.GetKey(KeyCode.W))
-        {
+        //// forward/backward power
+        //if (Input.GetKey(KeyCode.W))
+        //{
 
-            PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * MaxSpeed, Power);
-        }
-        if(Input.GetKey(KeyCode.S))
-        {
-            PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * -MaxSpeed, Power);
-        }
+        //    PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * MaxSpeed, Power);
+        //}
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * -MaxSpeed, Power);
+        //}
     }
 }
