@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Music
-    clip: {fileID: 8300000, guid: eafad64496c77ed428f64d7b3945a884, type: 3}
+    clip: {fileID: 8300000, guid: 70e5e12c1cdc2d5499eb75f3370e0d67, type: 3}
     volume: 0.5
     tempo: 1
     RandomVolume: 0
@@ -58,22 +58,8 @@ MonoBehaviour:
     RandomVolume: 0
     RandomTempo: 0
     loop: 0
-  - name: Africa
-    clip: {fileID: 8300000, guid: be7c7f9e2d78a4e44b61fba504709221, type: 3}
-    volume: 1
-    tempo: 1
-    RandomVolume: 0
-    RandomTempo: 0
-    loop: 1
   - name: Level1_BGM
-    clip: {fileID: 8300000, guid: 70e5e12c1cdc2d5499eb75f3370e0d67, type: 3}
-    volume: 1
-    tempo: 1
-    RandomVolume: 0
-    RandomTempo: 0
-    loop: 1
-  - name: RiverFlow
-    clip: {fileID: 8300000, guid: e6ef8d8eb8bf5b94bb3762fa07a6c1aa, type: 3}
+    clip: {fileID: 8300000, guid: 0f1efda2e8ad7f746bb141ba6e479329, type: 3}
     volume: 1
     tempo: 1
     RandomVolume: 0
@@ -93,3 +79,10 @@ MonoBehaviour:
     RandomVolume: 0.1
     RandomTempo: 0.1
     loop: 0
+  - name: GameOverBGM
+    clip: {fileID: 8300000, guid: 0f1efda2e8ad7f746bb141ba6e479329, type: 3}
+    volume: 0.1
+    tempo: 0.75
+    RandomVolume: 0.1
+    RandomTempo: 0.1
+    loop: 1

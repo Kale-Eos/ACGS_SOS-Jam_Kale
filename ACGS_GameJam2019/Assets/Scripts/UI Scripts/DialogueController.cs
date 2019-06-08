@@ -16,6 +16,12 @@ public class DialogueController : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        if (audioManager == null)
+        {
+            Debug.LogError("No AudioManager Found");
+        }
+
         StartCoroutine(Typing());
     }
 

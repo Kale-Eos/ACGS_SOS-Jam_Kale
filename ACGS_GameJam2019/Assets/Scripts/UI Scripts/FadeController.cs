@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FadeController : MonoBehaviour
 {
     public Animator BlurFade;
+
     [SerializeField]
     string sceneName1 = "Level1";
     [SerializeField]
@@ -19,31 +20,31 @@ public class FadeController : MonoBehaviour
 
     public void Loader1()
     {
-        BlurFade.SetTrigger("End");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("LoadScene1", 5);                             // loads onto the Level 1 scene
     }
 
     public void Loader2()
     {
-        BlurFade.SetTrigger("End");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("LoadScene2", 5);                             // loads onto the Level 2 scene
     }
 
     public void Loader3()
     {
-        BlurFade.SetTrigger("End");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("LoadScene3", 5);                             // loads onto the Level 3 scene
     }
 
     public void LoaderFree()
     {
-        BlurFade.SetTrigger("End");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("LoadSceneFreeRoam", 5);                      // loads onto the Free Roam scene
     }
 
     public void LoaderCredits()
     {
-        BlurFade.SetTrigger("End");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("LoadSceneCredits", 5);                      // loads onto the Credits scene
     }
 

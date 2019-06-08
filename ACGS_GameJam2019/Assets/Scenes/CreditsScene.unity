@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 364146886}
   - component: {fileID: 364146885}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 1075590693}
   - component: {fileID: 1075590692}
   m_Layer: 5
-  m_Name: BackText
+  m_Name: SkipText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Back
+  m_text: Skip
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0db7b51bf85538418049f994fac859e, type: 2}
   m_sharedMaterial: {fileID: 3710876850617023460, guid: e0db7b51bf85538418049f994fac859e,
@@ -1149,6 +1149,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5615906150572783765, guid: d295ac473a675e34cb4ac94d20eecb69,
+        type: 3}
+      propertyPath: CreditsBlur
+      value: 
+      objectReference: {fileID: 1690613135}
+    - target: {fileID: 5615906150572783765, guid: d295ac473a675e34cb4ac94d20eecb69,
+        type: 3}
+      propertyPath: BlurFade
+      value: 
+      objectReference: {fileID: 1690613135}
+    - target: {fileID: 5615906150572783764, guid: d295ac473a675e34cb4ac94d20eecb69,
+        type: 3}
+      propertyPath: BlurFade
+      value: 
+      objectReference: {fileID: 1690613135}
     - target: {fileID: 5615906150572783767, guid: d295ac473a675e34cb4ac94d20eecb69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1204,16 +1219,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5615906150572783765, guid: d295ac473a675e34cb4ac94d20eecb69,
-        type: 3}
-      propertyPath: CreditsBlur
-      value: 
-      objectReference: {fileID: 1690613135}
-    - target: {fileID: 5615906150572783764, guid: d295ac473a675e34cb4ac94d20eecb69,
-        type: 3}
-      propertyPath: BlurFade
-      value: 
-      objectReference: {fileID: 1690613135}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d295ac473a675e34cb4ac94d20eecb69, type: 3}
 --- !u!114 &1717291335 stripped

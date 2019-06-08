@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class MainMenuController : MonoBehaviour
 {
     AudioManager audioManager;
-    public Animator CreditsBlur;
+    public Animator BlurFade;
 
     void Start()
     {
@@ -35,7 +35,9 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     string freeRoam = "FreeRoam";                           // instantiates Free Roam BGM
     [SerializeField]
-    string credits_bgm = "Credits_BGM";
+    string credits_bgm = "Credits_BGM";                     // instantiates Credits BGM
+    [SerializeField]
+    string gameOver_bgm = "GameOver_BGM";                   // instantiates Game Over BGM
 
     public void OnMouseOver()
     {
@@ -99,12 +101,22 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayCredits_BGM()
     {
-        audioManager.PlaySound(credits_bgm);                // Plays Free Roam bgm
+        audioManager.PlaySound(credits_bgm);                // Plays Credits bgm
     }
 
     public void StopCredits_BGM()
     {
-        audioManager.StopSound(credits_bgm);                // Stop Free Roam bgm
+        audioManager.StopSound(credits_bgm);                // Stops Credits bgm
+    }
+
+    public void PlayGameOver_BGM()
+    {
+        audioManager.PlaySound(credits_bgm);                // Plays Game Over bgm
+    }
+
+    public void StopGameOver_BGM()
+    {
+        audioManager.StopSound(credits_bgm);                // Stops Game Over bgm
     }
 
     // Level BGM Control ///////////////////////////////////////////////////////////////////////////////////
@@ -117,8 +129,7 @@ public class MainMenuController : MonoBehaviour
 
     public void CreditsToMainMenu()
     {
-        CreditsBlur.SetTrigger("SetBlur");
-        CreditsBlur.Play("CreditsBlur");
+        BlurFade.SetTrigger("SetBlur");
         Invoke("CreditsToMenu", 5);
     }
 
@@ -126,6 +137,26 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScene");        // Reverses the the scene change to go back to Title Scene
         audioManager.StopSound("Credits_BGM");       // Stop playing Credits_BGM
+        audioManager.PlaySound("Music");             // Restarts main menu music
+    }
+
+    void GameOverRetry()
+    {
+        SceneManager.LoadScene("Level1");           // Reverses the the scene change to go back to Level1
+        audioManager.StopSound("GameOver_BGM");     // Stop playing GameOver_BGM
+        audioManager.PlaySound("Level1_BGM");       // Restarts main menu music
+    }
+
+    public void GameOverToMainMenu()
+    {
+        BlurFade.SetTrigger("SetBlur");
+        Invoke("GameOverToMenu", 5);
+    }
+
+    void GameOverToMenu()
+    {
+        SceneManager.LoadScene("TitleScene");        // Reverses the the scene change to go back to Title Scene
+        audioManager.StopSound("GameOver_BGM");      // Stop playing GameOver_BGM
         audioManager.PlaySound("Music");             // Restarts main menu music
     }
 
