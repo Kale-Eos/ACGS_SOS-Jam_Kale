@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PauseMenuController : MonoBehaviour
     public string sceneName;
     public static bool PauseGame = false;
     public GameObject pauseUI;
+    public GameObject inGameUI;
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class PauseMenuController : MonoBehaviour
     public void Resume()
     {
         pauseUI.SetActive(false);               // unpauses game
+        inGameUI.SetActive(true);               // brings back UIpanel
         Time.timeScale = 1f;                    // time is unfrozen
         PauseGame = false;
     }
@@ -42,6 +45,7 @@ public class PauseMenuController : MonoBehaviour
     public void Pause()
     {
         pauseUI.SetActive(true);                // pauses game
+        inGameUI.SetActive(false);              // deactivates UIpanel
         Time.timeScale = 0f;                    // time is frozen
         PauseGame = true;
     }
