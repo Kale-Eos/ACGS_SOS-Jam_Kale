@@ -10,11 +10,11 @@ public class WaterBoat : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, -20);
+        GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, 20);
 
         if(Input.GetKeyDown(KeyCode.A) && laneNum>1 && controlLocked == "n")
         {
-            horizVel = -30;
+            horizVel = -20;
             StartCoroutine(stopSlide());
             laneNum -= 1;
             controlLocked = "y";
@@ -22,10 +22,15 @@ public class WaterBoat : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D) && laneNum<3 && controlLocked == "n")
         {
-            horizVel = 30;
+            horizVel = 20;
             StartCoroutine(stopSlide());
             laneNum += 1;
             controlLocked = "y";
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && controlLocked == "n")
+        {
+            
         }
     }
 

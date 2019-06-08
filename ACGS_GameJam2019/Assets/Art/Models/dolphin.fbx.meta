@@ -80,7 +80,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 1
+    importAnimatedCustomProperties: 0
     importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
@@ -386,7 +386,7 @@ ModelImporter:
       internalID: -8161923729326017775
       firstFrame: 0
       lastFrame: 20
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
