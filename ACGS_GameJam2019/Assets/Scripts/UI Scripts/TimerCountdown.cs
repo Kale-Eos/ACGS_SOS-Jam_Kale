@@ -15,6 +15,8 @@ public class TimerCountdown : MonoBehaviour
     private bool canCount = true;
     private bool playOnce = false;
 
+    public GameObject RainCountdown;
+
     void Start()
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -23,9 +25,12 @@ public class TimerCountdown : MonoBehaviour
             Debug.LogError("No AudioManager Found");
         }
 
-        timer = mainTimer;
-
         Scene currentScene = SceneManager.GetActiveScene();
+
+        if (RainCountdown == true)
+        {
+            timer = mainTimer;
+        }
     }
 
     void Update()
@@ -42,7 +47,8 @@ public class TimerCountdown : MonoBehaviour
             playOnce = true;
             uiText.text = "0.00";
             timer = 0.0f;
-            GameOver();
+            ResetButton();
+            //GameOver();
         }
 
     }
@@ -54,7 +60,7 @@ public class TimerCountdown : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
-    public void ResetButton()
+    void ResetButton()
     {
         timer = mainTimer;
         canCount = true;

@@ -60,7 +60,7 @@ MonoBehaviour:
     loop: 0
   - name: Level1_BGM
     clip: {fileID: 8300000, guid: 0f1efda2e8ad7f746bb141ba6e479329, type: 3}
-    volume: 1
+    volume: 0.6
     tempo: 1
     RandomVolume: 0
     RandomTempo: 0
@@ -79,9 +79,9 @@ MonoBehaviour:
     RandomVolume: 0.1
     RandomTempo: 0.1
     loop: 0
-  - name: GameOverBGM
+  - name: GameOver_BGM
     clip: {fileID: 8300000, guid: 0f1efda2e8ad7f746bb141ba6e479329, type: 3}
-    volume: 0.1
+    volume: 0.5
     tempo: 0.75
     RandomVolume: 0.1
     RandomTempo: 0.1

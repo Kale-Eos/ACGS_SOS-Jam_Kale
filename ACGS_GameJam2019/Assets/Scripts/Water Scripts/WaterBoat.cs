@@ -1,12 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaterBoat : MonoBehaviour
 {
+    AudioManager audioManager;
+
     private float horizVel;
     public int laneNum = 2;
     public string controlLocked = "n";
+
+    public ParticleSystem rainParticle;
+    public ParticleSystem fogParticle;
+
+    public Animator rainText;
+
+    public GameObject rainCountdown;
+
+    void Start()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
 
     void Update()
     {
@@ -30,7 +45,7 @@ public class WaterBoat : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && controlLocked == "n")
         {
-            
+
         }
     }
 
@@ -39,5 +54,34 @@ public class WaterBoat : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         horizVel = 0;
         controlLocked = "n";
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "RainSummonPowerUp")
+        {
+            Destroy(other.gameObject);
+            //fogParticle.Clear();
+            fogParticle.Stop();
+            rainParticle.Play();
+            rainCountdown.SetActive(true);
+            StartCoroutine(restartWeather());
+        }
+
+        if (other.gameObject.tag == "Lethal")
+        {
+            Destroy(other.gameObject);
+            audioManager.StopSound("Level1_BGM");
+            audioManager.PlaySound("GameOverBGM");
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    IEnumerator restartWeather()
+    {
+        yield return new WaitForSeconds(7f);
+        fogParticle.Play();
+        rainParticle.Stop();
+        rainCountdown.SetActive(false);
     }
 }
