@@ -58,13 +58,12 @@ public class WaterBoat : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "RainSummonPowerUp")
+        if (other.gameObject.tag == "PowerUp")
         {
             Destroy(other.gameObject);
             //fogParticle.Clear();
             fogParticle.Stop();
             rainParticle.Play();
-            rainCountdown.SetActive(true);
             StartCoroutine(restartWeather());
         }
 
@@ -79,6 +78,7 @@ public class WaterBoat : MonoBehaviour
 
     IEnumerator restartWeather()
     {
+        rainCountdown.SetActive(true);
         yield return new WaitForSeconds(7f);
         fogParticle.Play();
         rainParticle.Stop();
