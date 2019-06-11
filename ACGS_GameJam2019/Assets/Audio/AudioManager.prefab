@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311486485775737758}
   - component: {fileID: 311486485775737759}
+  - component: {fileID: 225293218}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: GameController
@@ -60,7 +61,7 @@ MonoBehaviour:
     loop: 0
   - name: Level1_BGM
     clip: {fileID: 8300000, guid: 0f1efda2e8ad7f746bb141ba6e479329, type: 3}
-    volume: 0.6
+    volume: 0.3
     tempo: 1
     RandomVolume: 0
     RandomTempo: 0
@@ -86,3 +87,11 @@ MonoBehaviour:
     RandomVolume: 0.1
     RandomTempo: 0.1
     loop: 1
+--- !u!81 &225293218
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311486485775737756}
+  m_Enabled: 1
