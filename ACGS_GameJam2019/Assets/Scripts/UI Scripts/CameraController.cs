@@ -38,8 +38,8 @@ public class CameraController : MonoBehaviour
 
         if (CamMode == 1)
         {
-            yield return new WaitForSeconds(1.5f);
-            CamChangeTo1st.Play("CamChanger");
+            //yield return new WaitForSeconds(1.5f);
+            //CamChangeTo1st.Play("CamChanger");
             FirstCam.SetActive(true);
             ThirdCam.SetActive(false);
         }
