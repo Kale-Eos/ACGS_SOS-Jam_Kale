@@ -24,8 +24,11 @@ public class WaveControl : MonoBehaviour
         Mesh.RecalculateBounds();
         Mesh.RecalculateNormals();
 
-        MeshFilter = gameObject.AddComponent<MeshFilter>();
-        MeshFilter.mesh = Mesh; // turn off for other Mech2 texture, turn on for Mech3
+        if (gameObject.GetComponent<MeshFilter>() == false)
+        {
+            MeshFilter = gameObject.AddComponent<MeshFilter>();
+            MeshFilter.mesh = Mesh; // turn off for other Mech2 texture, turn on for Mech3
+        }
     }
 
     public float GetHeight(Vector3 position)

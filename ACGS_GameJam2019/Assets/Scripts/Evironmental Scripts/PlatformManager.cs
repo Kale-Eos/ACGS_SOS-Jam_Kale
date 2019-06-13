@@ -13,14 +13,14 @@ public class PlatformManager : MonoBehaviour
     {
         for(int i = 0; i < platformprefabs.Length; i++)
         {
-            Instantiate(platformprefabs[i], new Vector3(0, -1, i * 160), Quaternion.Euler(0, 0, 0));
-            ZedOffset += 160;
+            Instantiate(platformprefabs[i], new Vector3(0, 0, i * 140), Quaternion.Euler(0, 0, 0));
+            ZedOffset += 140;
         }
     }
 
     public void RecyclePlatform(GameObject platform)
     {
         platform.transform.position = new Vector3(0, 0, ZedOffset);
-        ZedOffset += 160;
+        ZedOffset += 140;
     }
 }
