@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerrainStart
       objectReference: {fileID: 0}
+    - target: {fileID: 6525876338622688795, guid: 7828000528fd0494fac9342a3be1abbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6525876338622688794, guid: 7828000528fd0494fac9342a3be1abbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -185,6 +190,11 @@ PrefabInstance:
     - target: {fileID: 6525876338622688794, guid: 7828000528fd0494fac9342a3be1abbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710293120263410075, guid: 7828000528fd0494fac9342a3be1abbe,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1544,7 +1554,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 35dcb370d44eb29489f162d3fe047cbc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 35dcb370d44eb29489f162d3fe047cbc,
         type: 3}
@@ -2250,7 +2260,7 @@ MonoBehaviour:
   platformprefabs:
   - {fileID: 4856184595555264317, guid: 0db51ff98990a5f47ae7d9ebfd3539d4, type: 3}
   - {fileID: 3054971005682495404, guid: 3a8d9489c494c5f429e17cb74b5a7f02, type: 3}
-  - {fileID: 4856184595555264317, guid: 0db51ff98990a5f47ae7d9ebfd3539d4, type: 3}
+  - {fileID: 8218338865894107061, guid: 19cb61def54d0a14f8c06f1bd43ec071, type: 3}
   - {fileID: 3054971005682495404, guid: 3a8d9489c494c5f429e17cb74b5a7f02, type: 3}
 --- !u!4 &1910971627
 Transform:

@@ -111,12 +111,12 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGameOver_BGM()
     {
-        audioManager.PlaySound(credits_bgm);                // Plays Game Over bgm
+        audioManager.PlaySound(gameOver_bgm);                // Plays Game Over bgm
     }
 
     public void StopGameOver_BGM()
     {
-        audioManager.StopSound(credits_bgm);                // Stops Game Over bgm
+        audioManager.StopSound(gameOver_bgm);                // Stops Game Over bgm
     }
 
     // Level BGM Control ///////////////////////////////////////////////////////////////////////////////////

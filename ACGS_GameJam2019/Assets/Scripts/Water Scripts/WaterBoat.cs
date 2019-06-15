@@ -62,7 +62,7 @@ public class WaterBoat : MonoBehaviour
     {
         if (other.gameObject.tag == "PowerUp")
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             //fogParticle.Clear();
             fogParticle.Stop();
             rainParticle.Play();
@@ -72,10 +72,15 @@ public class WaterBoat : MonoBehaviour
         if (other.gameObject.tag == "Lethal")
         {
             Destroy(other.gameObject);
-            audioManager.StopSound("Level1_BGM");
-            audioManager.PlaySound("GameOverBGM");
-            SceneManager.LoadScene("GameOver");
+            LoadGameOver();
         }
+    }
+
+    public void LoadGameOver()
+    {
+            audioManager.StopSound("Level1_BGM");
+            audioManager.PlaySound("GameOver_BGM");
+            SceneManager.LoadScene("GameOver");
     }
 
     IEnumerator restartWeather()

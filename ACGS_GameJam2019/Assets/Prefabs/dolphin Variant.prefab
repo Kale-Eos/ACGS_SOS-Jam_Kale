@@ -14856,6 +14856,8 @@ MonoBehaviour:
   fogParticle: {fileID: 405346214}
   rainText: {fileID: 0}
   rainCountdown: {fileID: 0}
+  rainPowerUp: {fileID: 6117424979640711998, guid: fecd3044ebd24384aa9a729cd9764393,
+    type: 3}
 --- !u!1001 &5150503185151167732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15206,7 +15208,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b9353761e2313f6458dbc527d2f2aaf3,
         type: 3}
       propertyPath: m_Name
-      value: dolphin
+      value: dolphin Variant
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: b9353761e2313f6458dbc527d2f2aaf3,
         type: 3}

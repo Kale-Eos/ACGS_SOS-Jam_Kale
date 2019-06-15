@@ -7,10 +7,16 @@ public class Platform : MonoBehaviour
     private PlatformManager platformManager;
     private float canRecycle = -1;
     private float delay = 1f;
+    public GameObject powerUpOrb;
 
     private void OnEnable()
     {
         platformManager = GameObject.FindObjectOfType<PlatformManager>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        powerUpOrb.SetActive(true);
     }
 
     private IEnumerator OnTriggerExit(Collider other)
