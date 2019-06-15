@@ -8,6 +8,8 @@ public class WaterBoat : MonoBehaviour
     AudioManager audioManager;
 
     private float horizVel;
+    public float forwardVelocity;
+
     public int laneNum = 2;
     public string controlLocked = "n";
 
@@ -25,7 +27,7 @@ public class WaterBoat : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, 20);
+        GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, forwardVelocity);
 
         if(Input.GetKeyDown(KeyCode.A) && laneNum>1 && controlLocked == "n")
         {

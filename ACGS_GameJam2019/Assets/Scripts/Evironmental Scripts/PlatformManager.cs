@@ -6,7 +6,6 @@ public class PlatformManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] platformprefabs;
-    [SerializeField]
     private int ZedOffset;
 
     void Start()
