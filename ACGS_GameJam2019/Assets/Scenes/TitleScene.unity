@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -388,7 +388,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: 7800, y: 350}
+  m_SizeDelta: {x: 950, y: 350}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &153880931
 MonoBehaviour:
@@ -413,6 +413,8 @@ MonoBehaviour:
   m_text: 'A - Swim Left
 
     D - Swim Right
+
+    C - Changes between 1st and 3rd person view
 
     Esc - Pause Menu
 
@@ -449,8 +451,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -490,12 +492,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 153880931}
-    characterCount: 167
+    characterCount: 211
     spriteCount: 0
-    spaceCount: 38
-    wordCount: 37
+    spaceCount: 47
+    wordCount: 46
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
