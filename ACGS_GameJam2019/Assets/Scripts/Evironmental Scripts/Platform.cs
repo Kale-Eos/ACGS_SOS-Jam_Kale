@@ -23,7 +23,7 @@ public class Platform : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             platformManager.RecyclePlatform(this.transform.parent.gameObject);
         }
     }

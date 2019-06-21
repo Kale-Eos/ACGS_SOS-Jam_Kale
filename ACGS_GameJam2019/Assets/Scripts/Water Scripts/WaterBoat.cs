@@ -47,7 +47,7 @@ public class WaterBoat : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && controlLocked == "n")
         {
-
+            // add jump mechanic
         }
     }
 
